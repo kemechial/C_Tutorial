@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <ctype.h>
+ 
+int countbits(unsigned);
+main()
+{
+ int x;
+ x=0x00ffffff;
+ printf("input integer x: %x\n", x);
+ printf("number of 1-bits %d\n", bitcount(x));
+ return 0;
+} 
+
+int bitcount(unsigned x){
+  int b;
+  for(b=0; x!=0; x>>=1)
+    if(x & 01)
+      b++;
+  return b;
+}

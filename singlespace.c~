@@ -1,0 +1,21 @@
+#include <stdio.h>
+/*
+replace multiple blanks with a single blank
+*/
+main()
+{
+
+ int c,bc;
+ bc=0, c=0;
+ while((c=getchar())!=EOF){
+	if(c!=' ')
+          bc=0;			
+	else
+	  ++bc;
+	if(bc<2){
+	  printf("Output a character\n");
+	  putchar(c);	
+	}            	
+  }
+}
+  

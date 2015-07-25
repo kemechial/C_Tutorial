@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int strlen(char[]);
+
+char wrd[10];
+
+main(){
+  int i, l, c;
+  for(i=0; i<9 && (c=getchar())!=EOF; ++i)
+    wrd[i]=c;
+  ++i;
+  wrd[i]='\n';
+  l=strlen(wrd);
+  printf("length is: %d\n", l);
+  return 0;
+
+}
+
+int strlen(char s[]){
+  int i=0;
+  while(s[i]!='\0')
+    ++i;
+  return i;
+
+}
